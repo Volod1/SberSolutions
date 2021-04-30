@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SberSolutions.Api", "SberSolutions.Api\SberSolutions.Api.csproj", "{C5FED9B7-99AB-40F2-8833-308B2EB1C3C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5FED9B7-99AB-40F2-8833-308B2EB1C3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FED9B7-99AB-40F2-8833-308B2EB1C3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FED9B7-99AB-40F2-8833-308B2EB1C3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FED9B7-99AB-40F2-8833-308B2EB1C3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {522CE5CF-E15E-4CBD-BF46-9B3A9206E72A}
+	EndGlobalSection
+EndGlobal
