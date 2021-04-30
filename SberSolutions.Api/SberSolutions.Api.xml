@@ -4,15 +4,64 @@
         <name>SberSolutions.Api</name>
     </assembly>
     <members>
-        <member name="M:SberSolutions.Api.Controllers.LunchController.GetPaid(SberSolutions.Api.Models.LunchSettings)">
+        <member name="M:SberSolutions.Api.Controllers.LunchController.GetPaid(SberSolutions.Api.Models.LunchRequest)">
             <summary>
             Метод предназначен для расчета стоимости обеда сотрудника за указанный период
             с учетом перерыва и изменения стоимости обеда
             </summary>
-            <param name="lunchSettings">Настройки обеда</param>
+            <param name="request">Настройки обеда</param>
             <returns>Возвращает стоимость обеда за указанный период, с учетом входных параметров</returns>
         </member>
-        <member name="M:SberSolutions.Api.Controllers.LunchController.GetTotalDaysOfPeriod(System.DateTime,System.DateTime,System.DateTime,System.DateTime)">
+        <member name="P:SberSolutions.Api.Models.LunchRequest.Start">
+            <summary>
+            Начало рассчетного периода
+            </summary>
+            <example>2021-04-03</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.End">
+            <summary>
+            Конец рассчетного периода
+            </summary>
+            <example>2021-05-01</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.ExcludeStart">
+            <summary>
+            Начало периода не входящего в рассчет
+            </summary>
+            <example>2021-04-06</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.ExcludeEnd">
+            <summary>
+            Конец периода не входящего в рассчет
+            </summary>
+            <example>2021-04-13</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.Cost">
+            <summary>
+            Начальная стоимость обеда
+            </summary>
+            <example>100</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.CostChangeStart">
+            <summary>
+            Дата смены стоимости обеда
+            </summary>
+            <example>2021-04-20</example>
+        </member>
+        <member name="P:SberSolutions.Api.Models.LunchRequest.CostAfterChange">
+            <summary>
+            Стоимость обеда после смены
+            </summary>
+            <example>300</example>
+        </member>
+        <member name="M:SberSolutions.Api.Services.LunchService.GetPaid(SberSolutions.Api.Models.LunchRequest)">
+            <summary>
+            Рассчитывает стоимость обеда сотрудника за указанный период с учетом перерыва и изменения стоимости обеда
+            </summary>
+            <param name="request">Настройки обеда</param>
+            <returns>Возвращает стоимость обеда</returns>
+        </member>
+        <member name="M:SberSolutions.Api.Services.LunchService.GetTotalDaysOfPeriod(System.DateTime,System.DateTime,System.DateTime,System.DateTime)">
             <summary>
             Метод возвращает количество дней за период
             </summary>
@@ -21,48 +70,6 @@
             <param name="excludeStart">Начало периода не входящего в расчет</param>
             <param name="excludeEnd">Конец периода не входящего в расчет</param>
             <returns>количество дней за период</returns>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.Start">
-            <summary>
-            Начало рассчетного периода
-            </summary>
-            <example>2021-04-03T00:00:00</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.End">
-            <summary>
-            Конец рассчетного периода
-            </summary>
-            <example>2021-05-01</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.ExcludeStart">
-            <summary>
-            Начало периода не входящего в рассчет
-            </summary>
-            <example>2021-04-06</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.ExcludeEnd">
-            <summary>
-            Конец периода не входящего в рассчет
-            </summary>
-            <example>2021-04-12</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.Cost">
-            <summary>
-            Начальная стоимость обеда
-            </summary>
-            <example>100</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.CostChangeStart">
-            <summary>
-            Дата смены стоимости обеда
-            </summary>
-            <example>2021-04-20</example>
-        </member>
-        <member name="P:SberSolutions.Api.Models.LunchSettings.CostAfterChange">
-            <summary>
-            Стоимость обеда после смены
-            </summary>
-            <example>300</example>
         </member>
     </members>
 </doc>

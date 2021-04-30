@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SberSolutions.Api.Services;
 using System;
 using System.IO;
 using System.Reflection;
@@ -38,6 +39,8 @@ namespace SberSolutions.Api
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
+            services.AddSingleton<ILunchService, LunchService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
